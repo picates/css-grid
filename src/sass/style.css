@@ -1,0 +1,177 @@
+/* Core Styles */
+
+body {
+	margin: 0;
+	font-family: arial, helvetica, sans-serif;
+	background: #333;
+	color: #fff;
+	font-size: 1.1em;
+	line-height: 1.5em;
+	text-align: center;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 1em 0;
+}
+
+p {
+	margin: 0;
+	padding: 1em 0;
+}
+
+.btn {
+	display: inline-block;
+	background: #333;
+	color: #fff;
+	text-decoration: none;
+	padding: 1em 2em;
+	margin: .5em 0;
+	border: 1px solid #555;
+}
+
+.btn:hover {
+	background: #fff;
+	color: #333;
+	opacity: 0.5;
+}
+
+
+/*header showcase*/
+#showcase {
+	min-height: 450px;
+	color: #fff;
+	text-align: center;
+}
+
+#showcase .bg-image {
+	background: #333 url(../images/s1.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 450px;
+	z-index: -1;
+	position: absolute;
+	opacity: 0.4;
+}
+
+#showcase h1 {
+	padding-top: 100px;
+	padding-bottom: 0;
+}
+
+#showcase .content-wrap {
+	padding: 0 1.5em;
+}
+
+
+/* saction-a */
+#section-a {
+	background: #fff;
+	color: #333;
+	padding-bottom: 2em;
+}
+
+#section-a .content-wrap {
+	padding: 0 1.5em;
+}
+
+
+/* section-b */
+
+#section-b {
+	padding: 2em 1em 0.5em;
+}
+
+#section-b ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#section-b li {
+	background: #fff;
+	color: #333;
+	margin-bottom: 2em;
+}
+
+.card-content {
+	padding: 1.5em;
+}
+
+
+/* section-c */
+#section-c {
+	background: #fff;
+	color: #333;
+	padding: 2em;
+}
+
+
+/* section-d / box */
+#section-d .box {
+	padding: 2em;
+	color: #fff;
+}
+
+#section-d .box:first-child {
+	background: #2690d4;
+}
+
+
+/* footer */
+#main-footer {
+	padding: 2em;
+	background: #000;
+	text-align: center;
+}
+
+#main-footer a {
+	text-decoration: none;
+	color: #2690d4;
+}
+
+
+/* Media queries */
+
+@media(min-width: 700px) {
+
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+	}
+
+	.content-wrap, #section-b ul {
+		grid-column: 2/4;
+	}
+
+	#section-a .content-text {
+		columns: 2;
+		column-gap: 2em;
+	}
+
+	#section-a .content-text p {
+		padding-top: 0;
+	}
+
+	.box, #main-footer div {
+		grid-column: span 2;
+	}
+
+	#section-b ul {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	#section-b li {
+		width: 31%;
+	}
+
+}
